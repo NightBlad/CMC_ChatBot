@@ -1,0 +1,207 @@
+sversion: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: welcome path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_welcome
+
+- story: introduction path
+  steps:
+    - intent: ask_about_introduction
+    - action: utter_introduction
+
+- story: admission path
+  steps:
+    - intent: ask_about_admission
+    - action: utter_admission
+
+- story: training path
+  steps:
+    - intent: ask_about_training
+    - action: utter_training
+
+- story: address path
+  steps:
+    - intent: ask_about_address
+    - action: utter_address
+
+- story: about cmc university path
+  steps:
+    - intent: ask_about_cmc_university
+    - action: utter_about_cmc_university
+
+- story: about group path
+  steps:
+    - intent: ask_about_group
+    - action: utter_about_group
+
+- story: about cmc corporation
+  steps:
+    - intent: ask_about_cmc_details
+    - action: utter_about_cmc
+
+- story: Ask about programs
+  steps:
+    - intent: ask_programs
+    - action: utter_programs
+
+- story: Ask about requirements
+  steps:
+    - intent: ask_requirements
+    - action: utter_requirements
+
+- story: Ask about deadline
+  steps:
+    - intent: ask_deadline
+    - action: utter_deadline
+
+- story: Ask about admission process
+  steps:
+    - intent: ask_admission_process
+    - action: utter_admission_process
+
+- story: Ask about contact
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
+
+- story: Computer Science
+  steps:
+    - intent: ask_computer_science
+    - action: utter_computer_science
+
+- story: Graphic Design
+  steps:
+    - intent: ask_graphic_design
+    - action: utter_graphic_design
+
+- story: Business Management
+  steps:
+    - intent: ask_business_management
+    - action: utter_business_management
+
+- story: Korean Language
+  steps:
+    - intent: ask_korean_language
+    - action: utter_korean_language
+
+- story: Japanese Language
+  steps:
+    - intent: ask_japanese_language
+    - action: utter_japanese_language
+
+- story: about group path
+  steps:
+  - intent: ask_about_group
+  - action: utter_about_group
+
+- story: Ask about academic experience
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_academic_experience
+    - action: utter_academic_experience
+    - intent: affirm
+    - action: utter_did_that_help
+
+- story: Ask about campus life
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_campus_life
+    - action: utter_campus_life
+    - intent: affirm
+    - action: utter_did_that_help
+
+- story: Ask about career preparation
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_career_preparation
+    - action: utter_career_preparation
+    - intent: affirm
+    - action: utter_did_that_help
+
+- story: "User asks about school rules of CMC"
+  steps:
+    - intent: ask_rules
+    - action: utter_ask_rules
+
+- story: User asks about bilingual programs
+  steps:
+    - intent: ask_bilingual_programs
+    - action: utter_bilingual_programs
+
+- story: User asks about opportunities
+  steps:
+    - intent: ask_opportunities
+    - action: utter_opportunities
+
+
+- story: provide information about Vietnam-Japan IT program
+  steps:
+    - intent: inform_viet_japan_program
+    - action: utter_inform_viet_japan_program
+
+- story: provide information about Vietnam-Korea IT program
+  steps:
+    - intent: inform_viet_korea_program
+    - action: utter_inform_viet_korea_program
+
+- story: provide information about English IT program
+  steps:
+    - intent: inform_english_it_program
+    - action: utter_inform_english_it_program
+
+- story: hỏi về chương trình học tiếng Anh
+  steps:
+    - intent: ask_about_english_program
+    - action: utter_english_program_info    
+
+- story: Hỏi về học phí CMC
+  steps:
+    - intent: ask_about_tuition
+    - action: utter_tuition_info   
+
+- story: Học bổng Đại học CMC
+  steps:
+    - intent: inquire_scholarship_cmc
+    - action: utter_scholarship_info
+
+- story: Ưu đãi xét tuyển sớm Đại học CMC
+  steps:
+    - intent: inquire_early_admission_scholarship
+    - action: utter_early_admission_info   

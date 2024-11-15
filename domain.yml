@@ -1,0 +1,446 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_about_introduction
+  - ask_about_admission
+  - ask_about_training
+  - ask_about_address
+  - ask_about_cmc_university
+  - ask_about_group
+  - ask_about_cmc_details
+  - ask_programs
+  - ask_requirements
+  - ask_deadline
+  - ask_admission_process
+  - ask_contact
+  - ask_computer_science
+  - ask_graphic_design
+  - ask_business_management
+  - ask_korean_language
+  - ask_japanese_language
+  - ask_academic_experience
+  - ask_campus_life
+  - ask_career_preparation
+  - ask_rules
+  - ask_admission23
+  - ask_bilingual_programs
+  - ask_opportunities
+  - inform_viet_japan_program
+  - inform_viet_korea_program
+  - inform_english_it_program
+  - ask_about_english_program
+  - ask_about_tuition
+  - inquire_scholarship_cmc
+  - inquire_early_admission_scholarship
+responses:
+  utter_greet:
+    - text: "Chào bạn! Bạn khỏe không?"
+
+  utter_cheer_up:
+    - text: "Đây là một cái gì đó để làm bạn vui lên:"
+      image: "https://i.imgur.com/QksP10x.jpeg"
+
+  utter_did_that_help:
+    - text: "Điều đó có giúp ích cho bạn không?"
+
+  utter_happy:
+    - text: "Tuyệt vời, tiếp tục nhé!"
+
+  utter_goodbye:
+    - text: "Tôi chưa thể hỗ trợ bạn vấn đề này, bạn có thể hỏi lại được không"
+
+  utter_iamabot:
+    - text: "Tôi là một bot, được hỗ trợ bởi Rasa, do nhóm 3 trong lớp 23IT1 tạo ra."
+
+  utter_welcome:
+    - text: |
+        Chào bạn, tôi có thể giúp gì?
+        1. Giới thiệu
+        2. Tuyển sinh
+        3. Đào tạo
+        4. Địa chỉ
+
+  utter_introduction:
+    - text: |
+        Đây là các mục trong phần Giới thiệu:
+        - Về Tập đoàn Công nghệ CMC
+        - Về Trường Đại học CMC
+        - Hội đồng Khoa học và Đào tạo
+        - Triết lý - Sứ mệnh - Tầm nhìn
+        - Giá trị cốt lõi
+        - Tài liệu giới thiệu Trường
+
+  utter_admission:
+    - text: |
+        Đây là các mục trong phần Tuyển sinh:
+        - Thông tin tuyển sinh
+        - Phương thức tuyển sinh
+        - Học phí
+        - Học bổng và ưu đãi
+        - Câu hỏi thường gặp
+        - Brochure 2024
+
+  utter_training:
+    - text: |
+        Đây là các mục chương trình Đào tạo:
+        - Hệ đào tạo gồm hệ đào tạo tiêu chuẩn SM(Standard Mode), Hệ đào tạo song ngữ(Global Mode)
+        - Chương trình tiếng Anh gồm 6 level
+
+  utter_address:
+    - text: |
+        Trụ sở chính: CMC Tower Số 11 Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội
+        Cơ sở 1: Số 84C, Đường Nguyễn Thanh Bình, Vạn Phúc, Hà Đông, Hà Nội
+        Cơ sở 2: Vạn Phúc Building, Đường Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội
+        Cơ sở 3: Tây Mỗ, Nam Từ Liêm, Hà Nội
+      image: "https://i.imgur.com/M2W9WUT.png"
+
+  utter_about_cmc:
+    - text: |
+        Giới thiệu về tập đoàn CMC:
+        - Lịch sử và thành lập:
+            + Tập đoàn CMC được thành lập vào năm 1993.
+            + Là một trong những tập đoàn công nghệ thông tin và viễn thông lớn tại Việt Nam.
+
+        - Lĩnh vực hoạt động:
+            + Công nghệ & Giải pháp.
+            + Dịch vụ Viễn thông.
+            + Kinh doanh Quốc tế.
+            + Nghiên cứu & Giáo dục.
+
+        - Thông tin chi tiết về Tập đoàn CMC bạn có thể xem tại: 
+      attachment:
+        type: "video"
+        payload:
+          src: "https://youtube.com/embed/rHRAVz6Wmm8"
+
+  utter_about_cmc_university:
+    - text: |
+        Là một thành viên thuộc Khối Giáo dục và Nghiên cứu của Tập đoàn Công nghệ CMC, Trường Đại học CMC được định hướng đến năm 2033 trở thành trường đại học đa ngành, có quy mô đào tạo từ 15.000 - 20.000 sinh viên, có cơ sở đào tạo tại ít nhất 3 tỉnh thành, có các ngành đào tạo đạt chuẩn quốc tế (ABET, ACBSP và AUN-QA).
+        
+        Thông tin chi tiết về Trường Đại học CMC bạn có thể xem tại:
+      attachment:
+        type: "video"
+        payload:
+          src: "https://www.youtube.com/embed/uxevhT72WEM?si=tOvKl6i75qQmNXfP"
+
+  utter_about_group:
+    - text: |
+        Giới thiệu về nhóm 3:
+        Gồm 3 thành viên:
+        - Nguyễn Hà Kiên
+        - Đào Tiến Đạt
+        - Nguyễn Định
+
+  utter_programs:
+    - text: |
+        Trường có các chương trình đào tạo đa dạng bao gồm Công nghệ Thông tin, Khoa học máy tính, Thiết kế đồ họa, Quản trị Kinh doanh, Ngôn ngữ Hàn Quốc, Ngôn ngữ Nhật Bản và nhiều ngành khác.
+        Thông tin chi tiết xem tại
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-dao-tao/"
+
+  utter_requirements:
+    - text: |
+        Yêu cầu đầu vào của trường bao gồm:
+        - Điểm thi tốt nghiệp THPT đạt mức quy định.
+        - Điểm học bạ đạt yêu cầu của ngành học.
+        - Các chứng chỉ ngoại ngữ hoặc kỹ năng bổ trợ tùy theo ngành học.
+        - Thí sinh có thể nộp thêm thành tích học tập nổi bật để được ưu tiên xét tuyển.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/tuyen-sinh/"
+
+  utter_deadline:
+    - text: |
+        Hạn cuối để nộp hồ sơ tuyển sinh vào trường là ngày 30 tháng 6 hàng năm. 
+        - Tuy nhiên, trường có thể tổ chức các đợt tuyển sinh bổ sung nếu còn chỉ tiêu. 
+        - Để biết chi tiết hơn về thời gian cụ thể, vui lòng theo dõi các thông báo trên website.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/tuyen-sinh/"
+
+  utter_admission_process:
+    - text: |
+        Quy trình tuyển sinh tại trường bao gồm các bước chính sau:
+        - Bước 1: Nộp hồ sơ trực tuyến hoặc trực tiếp tại trường.
+        - Bước 2: Xét tuyển dựa trên hồ sơ học tập và điểm số.
+        - Bước 3: Phỏng vấn trực tiếp với hội đồng tuyển sinh để đánh giá năng lực và định hướng học tập của ứng viên.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/tuyen-sinh/"
+
+  utter_contact:
+    - text: |
+        Để biết thêm thông tin hoặc nhận hỗ trợ, bạn có thể:
+        - Gọi điện thoại tới số 099.999.999.
+        - Gửi email tới địa chỉ: truongdaihoc@cmc.edu.vn.
+        - Truy cập website của trường để cập nhật thông tin tuyển sinh, chương trình đào tạo và các sự kiện.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/tuyen-sinh/"
+
+  utter_computer_science:
+    - text: |
+        Ngành Công nghệ Thông tin tại CMC cung cấp các môn học và lĩnh vực đào tạo chính như:
+        - Lập trình ứng dụng và phát triển phần mềm.
+        - Phát triển web và thiết kế hệ thống mạng.
+        - Trí tuệ nhân tạo và học máy.
+        - An ninh mạng và bảo mật thông tin.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-dao-tao/"
+
+  utter_graphic_design:
+    - text: |
+        Ngành Thiết kế đồ họa tại CMC bao gồm các môn học và lĩnh vực chính như:
+        - Thiết kế 2D, 3D và mỹ thuật đa phương tiện.
+        - Hoạt hình và kỹ thuật dựng phim.
+        - Truyền thông đa phương tiện và thiết kế giao diện.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-dao-tao/"
+
+  utter_business_management:
+    - text: |
+        Ngành Quản trị Kinh doanh tại CMC cung cấp chương trình đào tạo về:
+        - Quản lý doanh nghiệp và các kỹ năng lãnh đạo.
+        - Marketing và chiến lược kinh doanh.
+        - Tài chính và kế toán doanh nghiệp.
+        - Khởi nghiệp và phát triển kinh doanh.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/dai-hoc-cmc"
+
+  utter_korean_language:
+    - text: |
+        Ngành Ngôn ngữ Hàn Quốc tại CMC bao gồm các môn học và kỹ năng chính như:
+        - Ngữ pháp tiếng Hàn từ cơ bản đến nâng cao.
+        - Giao tiếp và phát âm chuẩn tiếng Hàn.
+        - Văn hóa và lịch sử Hàn Quốc.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-dao-tao/"
+
+  utter_japanese_language:
+    - text: |
+        Ngành Ngôn ngữ Nhật Bản tại CMC bao gồm các môn học và kỹ năng chính như:
+        - Ngữ pháp và từ vựng tiếng Nhật từ cơ bản đến nâng cao.
+        - Giao tiếp và phát âm chuẩn tiếng Nhật.
+        - Văn hóa, lịch sử và phong tục của Nhật Bản.
+        Thông tin chi tiết xem tại:
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-dao-tao/"
+  
+  utter_academic_experience:
+    - text: |
+        Tại CMC, sinh viên được tham gia nhiều hoạt động học tập trải nghiệm thực tế:
+        
+        1. Học kỳ doanh nghiệp: Sinh viên có cơ hội thực tập và làm việc trực tiếp tại các doanh nghiệp, tích lũy kinh nghiệm thực tế và phát triển các kỹ năng nghề nghiệp cần thiết.
+        
+        2. Học kỳ trao đổi ở nước ngoài: CMC tạo điều kiện để sinh viên có thể học tập tại các trường đại học đối tác ở nước ngoài, giúp mở rộng kiến th���c và hiểu biết về văn hóa quốc tế.
+        
+        3. Hỗ trợ khởi nghiệp: Nhà trường cung cấp các chương trình và hỗ trợ để sinh viên có thể phát triển ý tưởng khởi nghiệp và thành lập doanh nghiệp riêng.
+        
+        4. Kết nối với cộng đồng: Sinh viên được khuyến khích tham gia các hoạt động cộng đồng, tạo dựng mối liên hệ xã hội và đóng góp tích cực cho xã hội.
+        
+        5. Sinh viên nghiên cứu khoa học: CMC khuyến khích sinh viên tham gia vào các dự án nghiên cứu khoa học, phát triển tư duy sáng tạo và khám phá lĩnh vực chuyên môn.
+        
+        6. Learning Zone: Khu vực học tập được trang bị đầy đủ thiết bị và tài liệu, cung cấp không gian học tập hiện đại và sáng tạo cho sinh viên.
+
+  utter_campus_life:
+    - text: |
+        Đời sống học đường tại CMC vô cùng sôi động và phong phú với nhiều hoạt động bổ ích:
+        
+        1. Các câu lạc bộ sinh viên: Sinh viên có thể tham gia vào các câu lạc bộ như văn hóa, thể thao, nghệ thuật và học thuật, giúp phát triển kỹ năng mềm và mở rộng quan hệ xã hội.
+        
+        2. Các sự kiện sinh viên: Trường tổ chức thường xuyên các sự kiện như hội thảo, tọa đàm, dạ hội, và các cuộc thi, tạo môi trường giao lưu và học hỏi giữa các sinh viên.
+        
+        3. Hỗ trợ nhà ở cho sinh viên: CMC cung cấp các gói hỗ trợ nhà ở cho sinh viên ở xa, giúp các bạn ổn định cuộc sống và yên tâm học tập.
+        
+        4. Hỗ trợ vay vốn tín dụng sinh viên: Trường hỗ trợ sinh viên vay vốn tín dụng với lãi suất ưu đãi để giảm bớt gánh nặng tài chính.
+        
+        5. Hỗ trợ sinh viên học tập: CMC có các chương trình hỗ trợ học tập đặc biệt cho những sinh viên có nhu cầu, bao gồm trợ giúp tài liệu, hỗ trợ giáo viên và các lớp học bổ trợ.
+        
+        6. Tư vấn tâm lý: Trường có các dịch vụ tư vấn tâm lý giúp sinh viên vượt qua căng thẳng và giữ vững tinh thần tốt trong học tập.
+        
+        7. Các hoạt động thể thao, rèn luyện thể chất: Sinh viên có thể tham gia các hoạt động thể thao như bóng đá, bóng chuyền, và các lớp tập luyện thể chất để nâng cao sức khỏe và năng lượng.
+
+  utter_career_preparation:
+    - text: |
+        CMC trang bị cho sinh viên những kỹ năng và kinh nghiệm cần thiết để sẵn sàng bước vào sự nghiệp:
+        
+        1. Thăm quan doanh nghiệp: Trường tổ chức các chuyến thăm quan doanh nghiệp, giúp sinh viên có cái nhìn thực tế về môi trường làm việc và quy trình hoạt động tại các công ty.
+        
+        2. Hỗ trợ thi chứng chỉ quốc tế: Sinh viên được hỗ trợ để thi lấy các chứng chỉ quốc tế trong lĩnh vực chuyên ngành, nâng cao khả năng cạnh tranh và chuyên môn trong thị trường lao động.
+        
+        3. Hỗ trợ việc làm: Trường có các chương trình kết nối sinh viên với các doanh nghiệp, cung cấp thông tin việc làm và tổ chức các buổi phỏng vấn, hội chợ việc làm để giúp sinh viên tìm kiếm các cơ hội phù hợp ngay khi ra trường.
+  
+  utter_ask_rules:
+    - text: |
+        Dưới đây là các nội quy và quy định của trường đại học CMC bạn yêu cầu:
+        1. Nội quy học đường: Yêu cầu sinh viên tuân thủ các quy tắc về giờ giấc, trang phục, và cách ứng xử trong khuôn viên trường.
+        2. Nội quy phòng học: Sinh viên cần tuân thủ các quy định về vệ sinh lớp học, không làm phiền người khác trong suốt buổi học.
+        3. Quy định về việc cấp và sử dụng thẻ sinh viên: Giúp sinh viên hưởng các quyền lợi về giảm giá, ưu đãi, và các dịch vụ của trường.
+        4. Quy chế công tác sinh viên: Điều chỉnh các hoạt động sinh viên trong học tập, nghiên cứu và tham gia các hoạt động ngoại khóa.
+        5. Quy chế đào tạo trình độ đại học: Quy định các chuẩn mực học tập, thi cử và quản lý chương trình đào tạo tại trường.
+
+        Để xem thông tin chi tiết, vui lòng tham khảo trang web chính thức của trường: 
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/noi-quy-quy-dinh/"
+
+  utter_admission_info23:
+    - text: |
+        Tuyển sinh năm 2023,2024 của trường đại học CMC xét tuyển sớm các ngành sau:
+        - Công nghệ thông tin: 23đ
+        - Khoa học máy tính: 23đ
+        - Ngôn ngữ Hàn: 22đ
+        - Ngôn ngữ Nhật: 22đ
+        - Thiết kế đồ họa: 22,5đ
+        - Quản trị kinh doanh: 22,5đ
+        - Công nghệ thông tin Việt - Hàn:23đ
+        - Công nghệ thông tin Việt - Nhật:23đ
+        - Công nghệ kỹ thuật điện tử viễn thông:23đ
+        - Quản trị kinh doanh: 22,5đ
+        - Marketing: 22,5đ
+
+        Điểm xét tuyển sớm của các ngành dao động từ 22-23 điểm.
+        
+      image: https://cmcu.edu.vn/wp-content/uploads/2024/04/Dot-1-2-01.jpg  
+
+  utter_bilingual_programs:
+    - text: |
+        Đại học CMC có các ngành song ngữ nổi bật như:
+        - Ngành Công nghệ thông tin Việt-Nhật
+        - Ngành Công nghệ thông tin Việt-Hàn
+        - Ngành Khoa học máy tính
+
+  utter_opportunities:
+    - text: |
+        Sinh viên Đại học CMC có nhiều cơ hội như:
+        - Cơ hội thực tập tại các doanh nghiệp đối tác lớn
+        - Các chương trình giao lưu quốc tế
+        - Hỗ trợ việc làm sau khi tốt nghiệp
+        - Tham gia các dự án nghiên cứu và phát triển cùng giảng viên và doanh nghiệp.
+
+  utter_inform_viet_japan_program:
+    - text: |
+        Chương trình Công nghệ Thông tin Việt - Nhật tại CMC University được giảng dạy bằng tiếng Việt và tiếng Nhật.
+        Sinh viên sẽ được học về lập trình, khoa học dữ liệu, và trí tuệ nhân tạo, cùng các kỹ năng cần thiết cho thị trường Nhật Bản. 
+        Cơ hội nghề nghiệp bao gồm thực tập và làm việc tại các công ty Nhật Bản, cả trong và ngoài nước.
+
+  utter_inform_viet_korea_program:
+    - text: |
+        Chương trình Công nghệ Thông tin Việt - Hàn của CMC University giảng dạy bằng tiếng Việt và tiếng Hàn.
+        Sinh viên sẽ học các kỹ năng công nghệ thông tin tiên tiến và làm quen với văn hóa doanh nghiệp Hàn Quốc. 
+        Cơ hội nghề nghiệp bao gồm thực tập và làm việc tại các công ty Hàn Quốc hoặc các doanh nghiệp Hàn Quốc tại Việt Nam.
+
+  utter_inform_english_it_program:
+    - text: |
+        Chương trình Công nghệ Thông tin tiếng Anh tại CMC University giảng dạy hoàn toàn bằng tiếng Anh.
+        Sinh viên sẽ được trang bị kiến thức về công nghệ thông tin toàn cầu và các kỹ năng ngôn ngữ, giúp dễ dàng hội nhập vào môi trường quốc tế. 
+        Cơ hội nghề nghiệp bao gồm làm việc tại các công ty đa quốc gia và các tổ chức quốc tế.
+
+  utter_english_program_info:
+    - text: |
+        Chương trình tiếng Anh tại Đại học CMC gồm 6 level. Bạn có thể lựa chọn học hệ song ngữ, hoàn thành đầy đủ 6 level hoặc quy đổi ra IELTS tương đương 6.0.
+        * Mỗi level có h��c phí là 10 triệu VND.
+        * Hệ thường yêu cầu hoàn thành tối thiểu 4 level để đủ điều kiện học chuyên ngành.
+        * Bạn có thể quy đổi điểm IELTS 6.0 nếu không muốn học đủ 6 level.
+        Để xem thông tin chi tiết, vui lòng tham khảo trang web chính thức của trường: 
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chuong-trinh-tieng-anh/"
+
+
+  utter_tuition_info:
+    - text: |
+        Học phí cho các chương trình đào tạo tại CMC:
+        - Hệ Tiêu chuẩn:
+          - Công nghệ Thông tin: 18.200.000 VNĐ
+          - Khoa học Máy tính: 18.200.000 VNĐ
+          - Công nghệ Kỹ thuật Điện tử - Viễn thông: 18.200.000 VNĐ
+          - Quản trị Kinh doanh: 16.800.000 VNĐ
+          - Marketing: 16.800.000 VNĐ
+          - Thiết kế Đồ họa: 16.800.000 VNĐ
+          - Ngôn ngữ Hàn Quốc: 15.400.000 VNĐ
+          - Ngôn ngữ Nhật: 15.400.000 VNĐ
+        - Hệ Song ngữ:
+          - Công nghệ Thông tin: 26.000.000 VNĐ
+          - Công nghệ Thông tin Việt-Hàn: 30.000.000 VNĐ
+          - - Công nghệ Thông tin Việt-Nhật: 30.000.000 VNĐ
+          - Khoa học Máy tính: 26.000.000 VNĐ
+          - Công nghệ Kỹ thuật Điện tử - Viễn thông: 26.000.000 VNĐ
+          - Quản trị Kinh doanh: 24.000.000 VNĐ
+          - Marketing: 24.000.000 VNĐ
+          Để xem thông tin chi tiết, vui lòng tham khảo trang web chính thức của trường: 
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/hoc-phi/"
+    
+  utter_scholarship_info:
+    - text: |
+       - "Trường Đại học CMC cung cấp 3 loại học bổng:
+       - **Học bổng CMC Khai phóng** (100% học phí): Dành cho thí sinh đạt giải quốc gia, quốc tế trong các kỳ thi học sinh giỏi, hoặc có tổng điểm thi THPT từ 26,00 điểm trở lên. 
+       - **Học bổng CMC Sáng tạo** (70% học phí): Dành cho thí sinh đạt giải học sinh giỏi cấp tỉnh, thành phố, có điểm thi THPT từ 25.5 điểm trở lên hoặc có chứng chỉ IELTS 7.0.
+       - **Học bổng CMC Tiên phong** (50% học phí): Dành cho thí sinh có điểm thi THPT từ 25.00 điểm trở lên hoặc có chứng chỉ IELTS 6.5 trở lên.
+       - Tất cả các học bổng đều không bao gồm học phí chương trình học tiếng Anh. 
+       Để xem thông tin chi tiết, vui lòng tham khảo trang web chính thức của trường: 
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chinh-sach-hoc-bong/"
+      
+  utter_early_admission_info:
+    - text: |
+        Trường Đại học CMC cung cấp các chính sách ưu đãi đặc biệt dành cho thí sinh nhập học sớm:
+        1. **Ưu đãi dành cho thí sinh là con của nhân viên Tập đoàn Công nghệ CMC**:
+            - Số lượng: 20 suất \n\
+            - Trị giá ưu đãi: 30% học phí toàn khóa học (không bao gồm học phí chương trình học tiếng Anh).
+            - Đối tượng: Thí sinh là con đẻ của nhân viên đang công tác tại các đơn vị thuộc Tập đoàn Công nghệ CMC, với thời gian công tác từ 5 năm trở lên tính tới ngày thí sinh làm thủ tục nhập học. 
+        2. **Chính sách ưu đãi dành cho thí sinh nộp hồ sơ sớm và ưu tiên nguyện vọng**: 
+            - Số lượng: 400 suất \n\
+            - Trị giá ưu đãi: Giảm 9.000.000 đồng học phí năm 1 (trừ vào học phí 3 học kỳ, mỗi học kỳ giảm 3.000.000 đồng). 
+            - Điều kiện: Thí sinh ĐKXT sớm từ ngày 10/01 đến 31/05/2024, trúng tuyển có điều kiện và nộp phí giữ học bổng trước ngày 31/05/2024. 
+            - Lưu ý: Không bao gồm học phí chương trình tiếng Anh, và thí sinh không được áp dụng ưu đãi này nếu đã nhận học bổng hoặc ưu đãi cao hơn. 
+            - Khoản phí này sẽ được trừ vào học phí phải nộp lần đầu khi thí sinh nhập học chính thức. Nếu thí sinh không nhập học, khoản phí này sẽ không hoàn lại.
+      attachment:
+        type: "website"
+        payload:
+          src: "https://cmcu.edu.vn/chinh-sach-hoc-bong/"
+actions:
+  - action_about_cmc
+  - action_about_cmc_university
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

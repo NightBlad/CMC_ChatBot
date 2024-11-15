@@ -1,0 +1,176 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to introduction questions
+  steps:
+    - intent: ask_about_introduction
+    - action: utter_introduction
+
+- rule: Respond to admission questions
+  steps:
+    - intent: ask_about_admission
+    - action: utter_admission
+
+- rule: Respond to training questions
+  steps:
+    - intent: ask_about_training
+    - action: utter_training
+
+- rule: Respond to address questions
+  steps:
+    - intent: ask_about_address
+    - action: utter_address
+
+- rule: Respond to about CMC University questions
+  steps:
+    - intent: ask_about_cmc_university
+    - action: utter_about_cmc_university
+
+- rule: Respond to about group questions
+  steps:
+    - intent: ask_about_group
+    - action: utter_about_group
+
+- rule: CMC corporation
+  steps:
+    - intent: ask_about_cmc_details
+    - action: utter_about_cmc
+
+- rule: Handle ask about programs
+  steps:
+    - intent: ask_programs
+    - action: utter_programs
+
+- rule: Handle ask about requirements
+  steps:
+    - intent: ask_requirements
+    - action: utter_requirements
+
+- rule: Handle ask about deadline
+  steps:
+    - intent: ask_deadline
+    - action: utter_deadline
+
+- rule: Handle ask about admission process
+  steps:
+    - intent: ask_admission_process
+    - action: utter_admission_process
+
+- rule: Handle ask about contact
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
+
+- rule: Respond to Computer Science program question
+  steps:
+    - intent: ask_computer_science
+    - action: utter_computer_science
+
+- rule: Respond to Graphic Design program question
+  steps:
+    - intent: ask_graphic_design
+    - action: utter_graphic_design
+
+- rule: Respond to Business Management program question
+  steps:
+    - intent: ask_business_management
+    - action: utter_business_management
+
+- rule: Respond to Korean Language program question
+  steps:
+    - intent: ask_korean_language
+    - action: utter_korean_language
+
+- rule: Respond to Japanese Language program question
+  steps:
+    - intent: ask_japanese_language
+    - action: utter_japanese_language
+
+- rule: Respond to about group questions
+  steps:
+  - intent: ask_about_group
+  - action: utter_about_group
+
+- rule: Respond to academic experience question
+  steps:
+    - intent: ask_academic_experience
+    - action: utter_academic_experience
+
+- rule: Respond to campus life question
+  steps:
+    - intent: ask_campus_life
+    - action: utter_campus_life
+
+- rule: Respond to career preparation question
+  steps:
+    - intent: ask_career_preparation
+    - action: utter_career_preparation
+
+- rule: "Answer to user asking about school rules of CMC"
+  steps:
+    - intent: ask_rules
+    - action: utter_ask_rules
+
+- rule: "Answer to user asking about admission info of CMC 2023"
+  steps:
+    - intent: ask_admission23
+    - action: utter_admission_info23
+
+- rule: User asks about bilingual programs
+  steps:
+    - intent: ask_bilingual_programs
+    - action: utter_bilingual_programs
+
+
+- rule: User asks about opportunities
+  steps:
+    - intent: ask_opportunities
+    - action: utter_opportunities
+
+- rule: Respond to inquiry about the Vietnam-Japan IT program
+  steps:
+      - intent: inform_viet_japan_program
+      - action: utter_inform_viet_japan_program
+
+- rule: Respond to inquiry about the Vietnam-Korea IT program
+  steps:
+      - intent: inform_viet_korea_program
+      - action: utter_inform_viet_korea_program
+
+- rule: Respond to inquiry about the English IT program
+  steps:
+      - intent: inform_english_it_program
+      - action: utter_inform_english_it_program    
+
+
+- rule: hỏi về chương trình học tiếng Anh
+  steps:
+    - intent: ask_about_english_program
+    - action: utter_english_program_info
+
+- rule: Học phí Đại học CMC
+  steps:
+    - intent: ask_about_tuition
+    - action: utter_tuition_info
+
+  
+- rule: Học bổng Đại học CMC
+  steps:
+    - intent: inquire_scholarship_cmc
+    - action: utter_scholarship_info
+
+- rule: Ưu đãi xét tuyển sớm Đại học CMC
+  steps:
+    - intent: inquire_early_admission_scholarship
+    - action: utter_early_admission_info   

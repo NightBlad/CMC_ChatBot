@@ -1,0 +1,798 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - chào
+    - xin chào
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - chào buổi chiều
+    - chào buổi trưa
+    - chào buổi tối bạn
+    - chào buổi sáng bạn
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - tạm biệt
+    - chào tạm biệt
+    - hẹn gặp lại
+    - chào nhé
+    - chào tạm biệt bạn
+    - tạm biệt bạn
+    - hẹn gặp lại bạn
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - vâng
+    - đúng
+    - chính xác
+    - tất nhiên
+    - đúng rồi
+    - đúng vậy
+    - phải
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - không
+    - không phải
+    - không đúng
+    - không thích
+    - không đời nào
+    - không đâu
+    - không phải đâu
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - tuyệt vời
+    - rất tốt
+    - tôi cảm thấy rất tuyệt
+    - tôi rất vui
+    - tôi rất hạnh phúc
+    - tôi rất tuyệt vời
+    - tôi rất tuyệt
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - tôi buồn
+    - tôi không vui
+    - tôi cảm thấy tệ
+    - tôi thất vọng
+    - tôi rất buồn
+    - tôi rất thất vọng
+    - tôi rất tệ
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bạn là bot à?
+    - bạn có phải là người không?
+    - tôi đang nói chuyện với bot à?
+    - tôi đang nói chuyện với người à?
+    - bạn là robot à?
+    - bạn có phải là robot không?
+
+- intent: ask_about_introduction
+  examples: |
+    - bạn có thể giới thiệu về tập đoàn CMC được không?
+    - bạn có thể nói về trường Đại học CMC không?
+    - kể cho tôi nghe về CMC
+    - cho tôi biết về trường CMC
+    - giới thiệu về CMC
+    - cho tôi thông tin về trường Đại học CMC
+    - CMC là gì vậy?
+    - Bạn biết gì về CMC?
+    - CMC là ai?
+    - CMC có những gì?
+    - CMC làm những gì?
+    - Có thể nói về CMC không?
+    - Nói sơ lược về CMC đi?
+    - Trường CMC là tổ chức nào?
+    - Giới thiệu về CMC đi?
+    - Đại học CMC là ai?
+    - CMC là trường gì?
+    - CMC là tập đoàn gì?
+
+- intent: ask_about_admission
+  examples: |
+    - bạn có thể cho tôi thông tin tuyển sinh không?
+    - tôi muốn biết thông tin tuyển sinh của trường CMC
+    - trường Đại học CMC có tuyển sinh không?
+    - phương thức tuyển sinh của trường là gì?
+    - tôi có thể đăng ký tuyển sinh ở đâu?
+    - Tuyển sinh năm nay thế nào?
+    - Cách nộp hồ sơ vào CMC?
+    - Đăng ký vào CMC làm sao?
+    - Cần làm gì để đăng ký?
+    - Thông tin tuyển sinh ra sao?
+    - Tuyển sinh như thế nào?
+    - Trường tuyển sinh năm nào?
+    - Điều kiện tuyển sinh của CMC?
+    - Khi nào mở tuyển sinh?
+    - Tuyển sinh ở đâu?
+    - Cần đăng ký ra sao?
+    - Hồ sơ tuyển sinh ra sao?
+
+- intent: ask_about_training
+  examples: |
+    - trường CMC có các ngành đào tạo nào?
+    - hệ đào tạo của trường CMC thế nào?
+    - các chương trình đào tạo của trường CMC có gì đặc biệt?
+    - Ngành nào được đào tạo?
+    - Học tại CMC có gì?
+    - Có chương trình nào?
+    - Đào tạo có gì đặc biệt?
+    - Các ngành nổi bật là gì?
+    - Chương trình nào đặc biệt?
+    - CMC đào tạo ra sao?
+    - CMC đào tạo ngành nào?
+    - Các hệ đào tạo là gì?
+    - Chương trình đào tạo nào nổi bật?
+  
+- intent: ask_about_address
+  examples: |
+    - trụ sở chính của CMC ở đâu?
+    - địa chỉ của trường CMC là gì?
+    - bạn có thể cho tôi địa chỉ của trường CMC không?
+    - CMC nằm ở đâu nhỉ?
+    - Địa chỉ trường là gì?
+    - Trụ sở chính của CMC?
+    - CMC ở chỗ nào?
+    - Trụ sở ở đâu?
+    - Trường CMC ở đâu?
+    - Có thể cho địa chỉ không?
+    - Tập đoàn ở đâu?
+    - CMC có văn phòng ở đâu?
+    - Địa chỉ của CMC?
+      - Chương trình học tại CMC?
+    - CMC nằm ở đâu nhỉ?
+    - Địa chỉ trường là gì?
+    - Trụ sở chính của CMC?
+    - CMC ở chỗ nào?
+    - Trụ sở ở đâu?
+    - Trường CMC ở đâu?
+    - Có thể cho địa chỉ không?
+    - Tập đoàn ở đâu?
+    - CMC có văn phòng ở đâu?
+    - Địa chỉ của CMC?
+
+
+- intent: ask_about_cmc_details
+  examples: |
+    - bạn có thể cho tôi thông tin chi tiết về tập đoàn CMC không?
+    - kể cho tôi nghe chi tiết về CMC
+    - bạn có thể giới thiệu về lịch sử và các hoạt động của CMC không?
+    - CMC là công ty như thế nào?
+    - tôi muốn biết thêm về Tập đoàn CMC
+    - bạn có thể cung cấp thông tin chi tiết về CMC được không?
+    - thông tin về Tập đoàn CMC
+    - Tập đoàn CMC làm gì?
+    - CMC hoạt động thế nào?
+    - Hoạt động của CMC là gì?
+    - Lịch sử của CMC?
+    - CMC làm các lĩnh vực gì?
+    - Tập đoàn có từ bao giờ?
+    - CMC ra đời từ khi nào?
+    - CMC có hoạt động gì?
+    - CMC có bao nhiêu công ty con?
+    - CMC chi tiết ra sao?
+    - CMC bao gồm gì?
+    - CMC lớn không?
+
+- intent: ask_programs
+  examples: |
+    - Trường có những chương trình đào tạo nào?
+    - Các ngành học của trường Đại học CMC là gì?
+    - Bạn có thể giới thiệu các chương trình học tại CMC không?
+    - Trường cung cấp những ngành học nào?
+    - Ngành học ra sao?
+    - Chương trình nào có ở CMC?
+    - CMC có ngành gì không?
+    - Chương trình nào hot?
+    - Học ngành gì?
+    - Các ngành nổi bật?
+    - Chương trình nào tại CMC?
+    - Ngành đào tạo của trường?
+    - Các ngành học có gì?
+    - CMC dạy ngành nào?
+    - Chương trình học gì?
+
+- intent: ask_requirements
+  examples: |
+    - Yêu cầu đầu vào của trường như thế nào?
+    - Điều kiện đăng ký vào trường CMC là gì?
+    - Trường yêu cầu gì đối với thí sinh đăng ký?
+    - Những yêu cầu nào cần có để vào CMC?
+    - Điều kiện đầu vào?
+    - CMC yêu cầu ra sao?
+    - Điều kiện học ở CMC?
+    - Yêu cầu nào để đăng ký?
+    - Điều kiện cho sinh viên?
+    - Tiêu chuẩn đầu vào là gì?
+    - Điều kiện nào cần?
+    - CMC cần tiêu chí gì?
+    - Điều kiện nhập học?
+    - Đầu vào như thế nào?
+
+- intent: ask_deadline
+  examples: |
+    - Hạn cuối nhận hồ sơ tuyển sinh là khi nào?
+    - Trường tuyển sinh đến khi nào?
+    - Thời gian nộp hồ sơ cho trường là bao lâu?
+    - Khi nào là hạn chót để đăng ký?
+    - Thời gian nộp hồ sơ?
+    - Hạn cuối là gì?
+    - Hạn chót là bao lâu?
+    - Đến khi nào hết hạn?
+    - Thời gian tuyển sinh?
+    - Hạn cuối là khi nào?
+    - Thời hạn tuyển sinh?
+    - Đăng ký hạn cuối bao lâu?
+    - Khi nào hết hạn hồ sơ?
+    - Khi nào nộp hồ sơ?
+
+- intent: ask_admission_process
+  examples: |
+    - Quy trình tuyển sinh như thế nào?
+    - Cách thức đăng ký vào trường CMC ra sao?
+    - Trình tự tuyển sinh của trường là gì?
+    - Quy trình đăng ký và phỏng vấn như thế nào?
+    - Quy trình đăng ký học ra sao?
+    - Tuyển sinh có những bước gì?
+    - Đăng ký vào CMC như thế nào?
+    - Cách nộp hồ sơ ra sao?
+    - Làm thế nào để tham gia tuyển sinh?
+    - Đăng ký học có cần phỏng vấn không?
+    - Thủ tục đăng ký thế nào?
+    - Cần làm gì để nhập học?
+    - Tuyển sinh theo các bước nào?
+    - CMC tuyển sinh thế nào?
+
+- intent: ask_contact
+  examples: |
+    - Làm sao để liên hệ với trường Đại học CMC?
+    - Tôi có thể gọi điện cho ai để biết thêm thông tin?
+    - Số điện thoại và email của trường là gì?
+    - Trường có email liên lạc không?
+    - Liên hệ với trường như thế nào?
+    - Làm sao để hỏi thông tin trường?
+    - Cách liên lạc với trường là gì?
+    - Có số điện thoại của trường không?
+    - Địa chỉ email của trường là gì?
+    - Có ai để tôi có thể hỏi không?
+    - Cách liên hệ với CMC?
+    - Gọi điện đến trường thế nào?
+    - Liên hệ qua email được không?
+    - Tôi có thể gửi thư cho trường qua đâu?
+
+- intent: ask_computer_science
+  examples: |
+    - Công nghệ Thông tin tại CMC như thế nào?
+    - Bạn có thể giới thiệu về ngành Công nghệ Thông tin không?
+    - Môn học trong ngành Công nghệ Thông tin là gì?
+    - Chương trình đào tạo Công nghệ Thông tin có gì đặc biệt?
+    - Ngành Công nghệ Thông tin học gì?
+    - Học Công nghệ Thông tin ở CMC ra sao?
+    - Công nghệ Thông tin có gì đặc biệt?
+    - Ngành Công nghệ Thông tin tại trường CMC?
+    - Các môn của ngành CNTT là gì?
+    - Đào tạo CNTT có gì nổi bật?
+    - CNTT ở CMC thế nào?
+    - Công nghệ Thông tin bao gồm gì?
+    - Cần học những gì trong CNTT?
+    - Chương trình CNTT ra sao?
+
+- intent: ask_graphic_design
+  examples: |
+    - Ngành Thiết kế đồ họa tại CMC như thế nào?
+    - Trường có đào tạo Thiết kế đồ họa không?
+    - Môn học của ngành Thiết kế đồ họa là gì?
+    - Học Thiết kế đồ họa ra sao?
+    - Ngành Thiết kế đồ họa thế nào?
+    - Thiết kế đồ họa có gì?
+    - Đào tạo ngành Thiết kế đồ họa thế nào?
+    - CMC có đào tạo thiết kế không?
+    - Thiết kế đồ họa có những môn gì?
+    - Ngành đồ họa học gì?
+    - Môn học trong đồ họa là gì?
+    - Thiết kế đồ họa tại CMC ra sao?
+    - Học thiết kế tại CMC có gì?
+
+- intent: ask_business_management
+  examples: |
+    - Ngành Quản trị Kinh doanh có gì đặc biệt?
+    - Trường CMC có đào tạo Quản trị Kinh doanh không?
+    - Bạn có thể cho tôi biết về chương trình Quản trị Kinh doanh?
+    - Ngành Quản trị Kinh doanh tại CMC thế nào?
+    - Quản trị Kinh doanh học gì?
+    - Quản trị Kinh doanh có gì đặc biệt không?
+    - Ngành này học gì?
+    - Đào tạo Quản trị Kinh doanh thế nào?
+    - Quản trị Kinh doanh tại trường ra sao?
+    - Chương trình Quản trị Kinh doanh là gì?
+    - Học QTKD ở đâu?
+    - Cần gì để học ngành QTKD?
+    - Học gì trong ngành QTKD?
+
+- intent: ask_korean_language
+  examples: |
+    - Ngành Ngôn ngữ Hàn Quốc tại CMC như thế nào?
+    - Trường có đào tạo Ngôn ngữ Hàn không?
+    - Môn học của ngành Ngôn ngữ Hàn là gì?
+    - Ngành Ngôn ngữ Hàn Quốc có gì?
+    - Ngôn ngữ Hàn tại CMC thế nào?
+    - Học Ngôn ngữ Hàn ở CMC ra sao?
+    - Ngành tiếng Hàn có đặc điểm gì?
+    - Các môn học của tiếng Hàn?
+    - CMC dạy tiếng Hàn không?
+    - Học tiếng Hàn ở trường nào?
+    - Ngành tiếng Hàn học gì?
+    - Học tiếng Hàn tại CMC thế nào?
+    - Ngành Ngôn ngữ Hàn có gì đặc biệt?
+
+- intent: ask_japanese_language
+  examples: |
+    - Ngành Ngôn ngữ Nhật Bản tại CMC như thế nào?
+    - Trường có đào tạo Ngôn ngữ Nhật không?
+    - Bạn có thể nói về ngành Ngôn ngữ Nhật?
+    - Ngành Ngôn ngữ Nhật là gì?
+    - Học Ngôn ngữ Nhật tại CMC ra sao?
+    - Tiếng Nhật có những gì?
+    - Ngành tiếng Nhật học gì?
+    - Các môn học trong ngành Nhật là gì?
+    - Ngành Nhật Bản học gì?
+    - Học tiếng Nhật tại CMC ra sao?
+    - CMC có đào tạo tiếng Nhật không?
+    - Chương trình tiếng Nhật thế nào?
+    - Ngành tiếng Nhật tại CMC có gì?
+
+- intent: ask_about_group
+  examples: |
+    - Giới thiệu về nhóm 3
+    - Nhóm 3 gồm những ai?
+    - Ai là thành viên của nhóm 3?
+    - Nhóm 3 là gì?
+    - Nhóm 3 có bao nhiêu người?
+
+- intent: ask_about_cmc_university
+  examples: |
+    - Trường Đại học CMC là gì?
+    - Bạn có thể giới thiệu về Trường Đại học CMC không?
+    - Thông tin về Trường Đại học CMC
+    - Trường Đại học CMC có những ngành đào tạo nào?
+    - Trường Đại học CMC có gì đặc biệt?
+    - Trường CMC là gì?
+    - CMC là trường nào?
+    - CMC có các ngành nào?
+    - Trường có gì nổi bật?
+    - ĐH CMC đào tạo ra sao?
+    - Đại học CMC có ngành gì?
+    - Đặc điểm trường CMC?
+    - Trường CMC dạy ngành nào?
+    - Trường có ngành gì?
+    - Đào tạo của trường ra sao?
+    - CMC
+    - CMC University
+    - Đại học CMC
+    - cmc
+
+- intent: ask_academic_experience
+  examples: |
+    - Học tập trải nghiệm ở CMC có gì đặc biệt?
+    - Trường có chương trình học kỳ doanh nghiệp cho sinh viên không?
+    - Tôi muốn biết về các hoạt động trải nghiệm tại CMC
+    - Sinh viên có được đi học kỳ trao đổi nước ngoài không?
+    - CMC có chương trình hỗ trợ sinh viên khởi nghiệp không?
+    - Có chương trình nghiên cứu khoa học cho sinh viên không?
+    - CMC hỗ trợ sinh viên kết nối với cộng đồng như thế nào?
+    - Learning Zone là gì?
+    - Làm thế nào để tham gia học kỳ doanh nghiệp tại CMC?
+    - Trường có hỗ trợ sinh viên khởi nghiệp không?
+    - Tôi có thể tham gia vào các dự án nghiên cứu khoa học ở CMC không?
+    - Sinh viên CMC có được kết nối với doanh nghiệp không?
+    - Học kỳ trao đổi quốc tế của trường CMC hoạt động ra sao?
+    - CMC có môi trường nào hỗ trợ học tập không?
+    - Học tập tại CMC có điều gì đặc biệt về trải nghiệm thực tế?
+    - Tôi muốn tìm hiểu về chương trình hỗ trợ khởi nghiệp tại CMC
+    - Những lợi ích của học kỳ doanh nghiệp là gì?
+    - Sinh viên có thể làm gì để kết nối với cộng đồng qua CMC?
+
+- intent: ask_campus_life
+  examples: |
+    - Đời sống học đường tại CMC ra sao?
+    - Các câu lạc bộ sinh viên ở CMC có phong phú không?
+    - CMC có các sự kiện sinh viên nào?
+    - Trường có hỗ trợ sinh viên ở xa về chỗ ở không?
+    - Sinh viên CMC có thể tham gia câu lạc bộ gì?
+    - Hỗ trợ vay vốn tín dụng sinh viên tại CMC như thế nào?
+    - Sinh viên có được hỗ trợ tâm lý không?
+    - CMC có các hoạt động thể thao cho sinh viên không?
+    - Hỗ trợ sinh viên trong việc học tập tại CMC gồm những gì?
+    - Tôi có thể tham gia câu lạc bộ thể thao tại CMC không?
+    - Sinh viên ở xa có được hỗ trợ về chỗ ở không?
+    - Trường có tổ chức các sự kiện thể thao không?
+    - Có các lớp tư vấn tâm lý cho sinh viên tại CMC không?
+    - Trường có hỗ trợ tài chính nào cho sinh viên không?
+    - Các sự kiện sinh viên thường niên tại CMC là gì?
+    - Trường có các hoạt động xã hội nào cho sinh viên không?
+    - Đời sống sinh viên tại CMC như thế nào?
+    - Trường có tổ chức hoạt động thể thao cho sinh viên không?
+    - Các câu lạc bộ sinh viên tại CMC hoạt động ra sao?
+    - Có các sự kiện gì dành cho sinh viên CMC?
+
+- intent: ask_career_preparation
+  examples: |
+    - Chuẩn bị cho sự nghiệp của sinh viên tại CMC có những gì?
+    - Trường có các hoạt động hỗ trợ việc làm cho sinh viên không?
+    - Tôi có thể nhận được hỗ trợ thi chứng chỉ quốc tế tại CMC không?
+    - CMC có tổ chức tham quan doanh nghiệp cho sinh viên không?
+    - Sinh viên có thể nhận được hỗ trợ nào để chuẩn bị đi làm?
+    - Trường có chương trình hỗ trợ thi chứng chỉ quốc tế không?
+    - Các chương trình hỗ trợ sinh viên tìm việc làm tại CMC là gì?
+    - Có các buổi hội thảo nghề nghiệp nào tại CMC không?
+    - Sinh viên có thể tham quan doanh nghiệp khi còn học ở CMC không?
+    - Tôi muốn biết về các hoạt động kết nối sinh viên với doanh nghiệp tại CMC
+    - CMC giúp sinh viên chuẩn bị cho sự nghiệp như thế nào?
+    - Trường có hướng dẫn sinh viên làm CV và chuẩn bị phỏng vấn không?
+    - CMC có chương trình nào giúp sinh viên thực hành nghề nghiệp không?
+    - Có những hỗ trợ nào cho sinh viên tìm việc làm tại CMC?
+    - Sinh viên có thể tham gia vào các buổi tham quan doanh nghiệp không?
+    - Các chương trình hỗ trợ phát triển nghề nghiệp tại CMC là gì?
+    - Làm thế nào để sinh viên CMC chuẩn bị tốt nhất cho sự nghiệp?
+    - Trường có giúp sinh viên tìm kiếm công việc sau khi tốt nghiệp không?
+    - Sinh viên CMC có được hỗ trợ gì khi thi chứng chỉ quốc tế không?
+    - CMC có tổ chức các buổi hướng nghiệp cho sinh viên không?
+
+- intent: ask_rules
+  examples: |
+    - Nội quy học đường của CMC là gì?
+    - Cho tôi biết nội quy phòng học tại CMC
+    - Quy định về việc cấp thẻ sinh viên CMC như thế nào?
+    - Quy chế công tác sinh viên CMC có gì đặc biệt?
+    - Quy chế đào tạo trình độ đại học tại CMC ra sao?
+
+- intent: ask_admission23
+  examples: |
+    - Tuyển sinh năm 2023 của CMC như thế nào?
+    - CMC tuyển sinh năm 2023 ra sao?
+    - Thông tin xét tuyển sớm CMC 2023
+    - Xét tuyển sớm CMC năm nay là bao nhiêu điểm?
+    - CMC xét tuyển các ngành nào năm 2023?
+    - Ngành Công nghệ thông tin xét tuyển sớm của CMC điểm bao nhiêu?
+    - Điểm xét tuyển năm 2023 của CMC là bao nhiêu?
+    - CMC xét tuyển sớm những ngành gì năm 2023?
+    - Điểm tuyển sinh các ngành của CMC năm 2023 là bao nhiêu?
+    - CMC tuyển sinh sớm ngành nào năm 2023?
+    - Ngành Khoa học máy tính của CMC điểm xét tuyển là bao nhiêu?
+    - Ngành Ngôn ngữ Hàn năm 2023 của CMC có điểm xét tuyển là bao nhiêu?
+    - Điểm chuẩn ngành Thiết kế đồ họa của CMC 2023 là bao nhiêu?
+    - CMC năm 2023 có xét tuyển sớm ngành Ngôn ngữ Nhật không?
+    - CMC xét tuyển ngành Công nghệ thông tin năm 2023 điểm bao nhiêu?
+    - CMC xét tuyển các ngành gì trong năm 2023?
+    - Năm 2023 đại học CMC xét tuyển bao điểm?
+    - Điểm thi 2023 ?
+    - Điểm xét tuyển 2023?
+     - Tuyển sinh năm 2024 của CMC như thế nào?
+    - CMC tuyển sinh năm 2024 ra sao?
+    - Thông tin xét tuyển sớm CMC 2024
+    - Xét tuyển sớm CMC năm nay là bao nhiêu điểm?
+    - CMC xét tuyển các ngành nào năm 2024?
+    - Ngành Công nghệ thông tin xét tuyển sớm của CMC điểm bao nhiêu?
+    - Điểm xét tuyển năm 2024 của CMC là bao nhiêu?
+    - CMC xét tuyển sớm những ngành gì năm 2024?
+    - Điểm tuyển sinh các ngành của CMC năm 2024 là bao nhiêu?
+    - CMC tuyển sinh sớm ngành nào năm 2024?
+    - Ngành Khoa học máy tính của CMC điểm xét tuyển là bao nhiêu?
+    - Ngành Ngôn ngữ Hàn năm 2024 của CMC có điểm xét tuyển là bao nhiêu?
+    - Điểm chuẩn ngành Thiết kế đồ họa của CMC 2024 là bao nhiêu?
+    - CMC năm 2024 có xét tuyển sớm ngành Ngôn ngữ Nhật không?
+    - CMC xét tuyển ngành Công nghệ thông tin năm 2024 điểm bao nhiêu?
+    - CMC xét tuyển các ngành gì trong năm 2024?
+    - Năm 2024 đại học CMC xét tuyển bao điểm?
+    - Điểm thi 2024?
+    - Điểm xét tuyển 2024?
+    - CMC có bao nhiêu ngành xét tuyển sớm năm 2024?
+    - Điều kiện xét tuyển đại học CMC năm 2024 như thế nào?
+    - Xét tuyển ngành Quản trị kinh doanh CMC năm 2024 cần điểm bao nhiêu?
+    - Ngành Thiết kế đồ họa của CMC điểm xét tuyển năm 2024 ?
+    - 2024
+
+
+
+- intent: ask_bilingual_programs
+  examples: |
+    - CMC có những ngành song ngữ nào?
+    - Các ngành song ngữ của Đại học CMC là gì?
+    - Ngành song ngữ của CMC có những ngành nào?
+    - CMC có ngành song ngữ không?
+    - Các ngành giảng dạy song ngữ tại CMC?
+    - CMC có ngành Công nghệ thông tin Việt-Nhật không?
+    - Ngành Công nghệ thông tin Việt-Hàn tại CMC là ngành gì?
+    - CMC có ngành Công nghệ thông tin kết hợp Việt-Nhật không?
+    - Đại học CMC có đào tạo ngành Công nghệ thông tin Việt-Hàn không?
+    - CMC có chương trình học song ngữ nào không?
+    - Các chương trình song ngữ tại CMC có những lợi ích gì?
+    - Ngành Công nghệ thông tin Việt-Nhật tại CMC học bằng ngôn ngữ nào?
+    - CMC có ngành nào học song ngữ Nhật-Hàn không?
+    - CMC có hợp tác với các trường đại học nước ngoài trong chương trình song ngữ không?
+    - Sinh viên ngành song ngữ tại CMC có cơ hội du học không?
+    - CMC có ngành nào dạy song ngữ tiếng Anh và tiếng Nhật không?
+    - Đại học CMC có chương trình đào tạo song ngữ cho ngành Marketing không?
+    - CMC có chương trình học song ngữ dành cho ngành Quản trị kinh doanh không?
+    - Các ngành song ngữ tại CMC có đào tạo tại cơ sở nước ngoài không?
+    - Chương trình song ngữ tại CMC có yêu cầu đầu vào như thế nào?
+    - CMC có đào tạo ngành Công nghệ thông tin bằng tiếng Nhật không?
+    - Ngành Công nghệ thông tin tại CMC học có phải bằng tiếng Hàn Quốc không?
+    - CMC có chương trình song ngữ chuyên ngành Kinh tế không?
+    - Các ngành học song ngữ tại CMC có yêu cầu kiến thức gì đặc biệt không?
+    - Học ngành Công nghệ thông tin Việt-Nhật tại CMC có cơ hội đi Nhật không?
+    - Ngành Công nghệ thông tin Việt-Hàn tại CMC có yêu cầu tiếng Hàn không?
+    - CMC có ngành Ngôn ngữ Nhật học song ngữ không?
+
+- intent: ask_opportunities
+  examples: |
+    - Cơ hội nghề nghiệp cho sinh viên Đại học CMC là gì?
+    - Học CMC có những cơ hội nào?
+    - Cơ hội thực tập của sinh viên CMC ra sao?
+    - Sau khi học CMC thì có cơ hội nào không?
+    - Cơ hội nghề nghiệp khi học các ngành song ngữ tại CMC?
+    - Sinh viên CMC có thể làm việc ở đâu sau khi tốt nghiệp?
+    - CMC có cung cấp cơ hội việc làm cho sinh viên không?
+    - Sau khi tốt nghiệp ngành Công nghệ thông tin tại CMC có thể làm gì?
+    - Sinh viên ngành Ngôn ngữ Nhật của CMC có thể làm việc ở đâu?
+    - Ngành Công nghệ thông tin Việt-Nhật có cơ hội việc làm ở Nhật Bản không?
+    - Ngành Công nghệ thông tin Việt-Hàn tại CMC có thể đi làm ở Hàn Quốc không?
+    - Sinh viên CMC có thể tham gia các chương trình thực tập quốc tế không?
+    - Các công ty Nhật Bản có tuyển sinh viên CMC không?
+    - Sinh viên ngành Ngôn ngữ Hàn tại CMC có thể làm việc trong các công ty Hàn Quốc không?
+    - Cơ hội thực tập tại các công ty Nhật Bản có cho sinh viên CMC không?
+    - Sinh viên tốt nghiệp ngành Thiết kế đồ họa tại CMC có thể làm ở đâu?
+    - Cơ hội việc làm cho sinh viên ngành Ngôn ngữ Hàn tại CMC là gì?
+    - Sinh viên ngành Công nghệ thông tin của CMC có thể làm việc tại các công ty công nghệ không?
+    - CMC có chương trình hỗ trợ việc làm cho sinh viên không?
+    - Học tại CMC có giúp tôi dễ dàng xin việc sau này không?
+    - Sinh viên ngành Khoa học máy tính của CMC có thể làm việc tại các công ty phần mềm không?
+    - Sau khi học CMC, sinh viên có thể làm việc tại các công ty quốc tế không?
+    - CMC có giúp sinh viên tìm việc làm sau khi tốt nghiệp không?
+    - Sinh viên ngành Quản trị kinh doanh tại CMC có thể làm ở đâu?
+    - Ngành Công nghệ thông tin Việt-Hàn của CMC có cơ hội làm việc ở Hàn Quốc không?
+    - CMC có hợp tác với các công ty Nhật để tạo cơ hội việc làm cho sinh viên không?
+    - Các công ty có tuyển dụng sinh viên ngành Ngôn ngữ Nhật của CMC không?
+    - Cơ hội thực tập của sinh viên ngành Ngôn ngữ Nhật tại CMC có tốt không?
+    - Cơ hội nghề nghiệp tại các công ty công nghệ cho sinh viên ngành Công nghệ thông tin CMC?
+    - Sinh viên học các ngành song ngữ tại CMC có thể làm việc tại các công ty quốc tế không?
+    - Cơ hội nghề nghiệp tại các công ty Hàn Quốc cho sinh viên ngành Ngôn ngữ Hàn tại CMC?
+    - CMC có tổ chức các buổi giới thiệu việc làm cho sinh viên không?
+    - Các ngành song ngữ tại CMC có giúp sinh viên dễ dàng xin việc tại các công ty quốc tế không?
+
+- intent: inform_viet_japan_program
+  examples: |
+    - Ngành Công nghệ Thông tin Việt - Nhật là gì?
+    - Ngành IT Việt - Nhật học những gì?
+    - Ngành Việt - Nhật học bằng tiếng gì?
+    - Ngành Công nghệ Thông tin Việt Nhật của CMC có gì đặc biệt?
+    - Công nghệ Thông tin Việt - Nhật có cơ hội làm việc ở Nhật không?
+    - Việt - Nhật IT đào tạo những gì?
+    - Ngành Công nghệ Thông tin Việt Nhật cần biết tiếng Nhật không?
+    - Ngành Việt Nhật giảng dạy ngôn ngữ nào?
+    - Học Công nghệ Thông tin Việt Nhật khó không?
+    - Cơ hội làm việc của ngành Công nghệ Thông tin Việt Nhật là gì?
+    - Ngành IT Việt Nhật tại CMC dạy như thế nào?
+
+- intent: inform_viet_korea_program
+  examples: |
+    - Ngành Công nghệ Thông tin Việt - Hàn có gì đặc biệt?
+    - Công nghệ Thông tin Việt - Hàn học bằng tiếng nào?
+    - Ngành Việt - Hàn học những gì?
+    - Ngành Công nghệ Thông tin Việt - Hàn tại CMC là gì?
+    - Ngành IT Việt Hàn có cơ hội làm việc ở Hàn Quốc không?
+    - Công nghệ Thông tin Việt - Hàn có dạy tiếng Hàn không?
+    - Ngành IT Việt - Hàn dạy ra sao?
+    - Ngành Công nghệ Thông tin Việt Hàn tại CMC có gì nổi bật?
+    - Học IT Việt Hàn cần chuẩn bị gì?
+    - Ngành IT Việt Hàn có cơ hội thực tập tại Hàn Quốc không?
+    - Công nghệ Thông tin Việt Hàn của CMC có những môn gì?
+
+- intent: inform_english_it_program
+  examples: |
+    - Ngành Công nghệ Thông tin tiếng Anh là gì?
+    - Ngành IT tiếng Anh học bằng ngôn ngữ nào?
+    - Học ngành Công nghệ Thông tin tiếng Anh như thế nào?
+    - Công nghệ Thông tin tiếng Anh có dạy hoàn toàn bằng tiếng Anh không?
+    - Ngành Công nghệ Thông tin tiếng Anh của CMC dạy ra sao?
+    - IT tiếng Anh có cơ hội làm việc quốc tế không?
+    - Ngành IT tiếng Anh có thể làm việc ở công ty nước ngoài không?
+    - Công nghệ Thông tin tiếng Anh khác gì so với Việt Nhật?
+    - Ngành IT tiếng Anh có thực tập ở nước ngoài không?
+    - Học IT tiếng Anh cần biết gì?
+    - Công nghệ Thông tin tiếng Anh có dễ không?
+    - Ngành IT tiếng Anh của CMC có gì đặc biệt? 
+
+- intent: ask_about_english_program
+  examples: |
+      - Chương trình tiếng Anh ở CMC như thế nào?
+      - CMC có bao nhiêu level tiếng Anh?
+      - Tôi muốn biết về các level tiếng Anh ở CMC
+      - Hệ song ngữ tiếng Anh ở CMC có yêu cầu gì?
+      - Học tiếng Anh ở CMC bao nhiêu tiền?
+      - Hệ song ngữ tiếng Anh ở CMC có yêu cầu hoàn thành bao nhiêu level?
+      - Tôi có thể học bao nhiêu level để đủ điều kiện vào CMC?
+      - Nếu tôi có chứng chỉ IELTS, có cần học tất cả các level không?
+      - Hệ song ngữ tiếng Anh ở CMC có quy đổi IELTS không?
+      - CMC có quy đổi IELTS không? Nếu có, điểm IELTS cần đạt là bao nhiêu?
+      - Mỗi level tiếng Anh ở CMC có học phí là bao nhiêu?
+      - Nếu tôi không muốn học đủ 6 level tiếng Anh, có cách nào khác không?
+      - CMC yêu cầu hoàn thành bao nhiêu level tiếng Anh đối với hệ thường?
+      - Cần phải hoàn thành bao nhiêu level tiếng Anh nếu tôi học hệ thường?
+      - Có thể học tiếng Anh hệ song ngữ và quy đổi ra IELTS không?
+
+- intent: ask_about_tuition
+  examples: |
+        - Học phí Đại học CMC là bao nhiêu?
+        - Học phí của Đại học CMC cho các ngành là gì?
+        - Học phí Đại học CMC cho hệ Song ngữ?
+        - Học phí Đại học CMC cho hệ Tiêu chuẩn?
+        - Học phí các ngành ở Đại học CMC thế nào?
+        - Học phí Đại học CMC có cao không?
+        - Học phí hệ Song ngữ Đại học CMC cao hơn Tiêu chuẩn bao nhiêu?
+        - Học phí của Đại học CMC có thay đổi mỗi năm không?
+        - Học phí Đại học CMC bao gồm những gì?
+        - Đại học CMC có chính sách hỗ trợ học phí không?
+        - Học phí hệ Song ngữ của Đại học CMC là bao nhiêu?
+        - Học phí hệ Tiêu chuẩn của Đại học CMC là bao nhiêu?
+        - Học phí cho ngành Công nghệ Thông tin Đại học CMC?
+        - Học phí ngành Quản trị Kinh doanh ở Đại học CMC?
+        - Học phí ngành Marketing Đại học CMC?
+        - Học phí ngành Thiết kế Đồ họa Đại học CMC?
+        - Học phí ngành Khoa học Máy tính Đại học CMC?
+        - Học phí ngành Ngôn ngữ Hàn Quốc Đại học CMC?
+        - Học phí ngành Ngôn ngữ Nhật Đại học CMC?
+        - Học phí ngành Công nghệ Thông tin Việt – Hàn Đại học CMC?
+        - Học phí ngành Công nghệ Thông tin Việt – Nhật Đại học CMC?
+        - Học phí ngành Kỹ thuật phần mềm Đại học CMC?
+        - Học phí ngành Kỹ thuật máy tính Đại học CMC?
+        - Học phí ngành An toàn thông tin Đại học CMC?
+        - Học phí ngành Thiết kế vi mạch bán dẫn Đại học CMC?
+        - Học phí ngành Trí tuệ nhân tạo và Dữ liệu lớn Đại học CMC?
+        - Học phí ngành Marketing số Đại học CMC?
+        - Học phí ngành Logistics và Quản lý chuỗi cung ứng Đại học CMC?
+        - Học phí ngành Quản trị Kinh doanh Song ngữ Đại học CMC?
+        - Sự khác biệt về học phí giữa hệ Tiêu chuẩn và Song ngữ ở Đại học CMC?
+        - Học phí ngành Quản trị Kinh doanh Tiêu chuẩn Đại học CMC?
+        - Học phí ngành Kỹ thuật điện tử - viễn thông Đại học CMC?
+        - Học phí ngành Thiết kế Đồ họa hoạt hình Đại học CMC?
+        - Học phí ngành Công nghệ Mạng và Truyền thông tiên tiến Đại học CMC?
+        - Chênh lệch học phí giữa hệ Tiêu chuẩn và Song ngữ Đại học CMC là bao nhiêu?
+
+- intent: inquire_scholarship_cmc
+  examples: |
+      - Học bổng CMC có những loại nào?
+      - Trường Đại học CMC có các học bổng nào?
+      - Tôi muốn biết về các loại học bổng của CMC.
+      - Các học bổng CMC dành cho sinh viên như thế nào?
+      - Bạn có thể cho tôi biết về các học bổng CMC?
+      - Học bổng CMC Khai phóng có giá trị bao nhiêu?
+      - Học bổng CMC Sáng tạo có giá trị gì?
+      - Học bổng CMC Tiên phong là bao nhiêu phần trăm?
+      - Bạn có thể cung cấp chi tiết về học bổng CMC Khai phóng không?
+      - Học bổng CMC Tiên phong có những yêu cầu gì?
+      - Học bổng 100% của CMC có điều kiện gì?
+      - Học bổng 50% của CMC yêu cầu gì?
+      - Điều kiện xét học bổng CMC là gì?
+      - Học bổng CMC dành cho ai?
+      - Các học bổng này có yêu cầu gì về điểm số không?
+      - Thí sinh có thể nhận học bổng nào của CMC?
+      - Học bổng CMC có bao gồm học phí chương trình học tiếng Anh không?
+      - Học bổng CMC Khai phóng dành cho đối tượng nào?
+      - Để nhận học bổng CMC Khai phóng, tôi cần đạt được gì?
+      - Học bổng CMC Sáng tạo yêu cầu gì về điểm số và giải thưởng?
+      - Học bổng CMC Tiên phong có yêu cầu về điểm thi không?
+      - CMC có học bổng cho thí sinh có chứng chỉ IELTS không?
+      - Học bổng CMC có yêu cầu chứng chỉ ngoại ngữ không?
+      - Tôi có thể biết thêm về các học bổng khác của CMC không?
+      - Học bổng CMC dành cho thí sinh có giải quốc tế không?
+      - Học bổng CMC Tiên phong có yêu cầu về môn thi nào không?
+      - Học bổng CMC có dành cho thí sinh không đạt giải học sinh giỏi không?
+      - Học bổng CMC dành cho các ngành học nào?
+      - Có học bổng cho thí sinh đăng ký vào ngành Ngôn ngữ Nhật không?
+      - Nếu tôi có chứng chỉ IELTS, có thể nhận học bổng CMC không?
+      - Học bổng CMC có yêu cầu về kết quả học tập ở lớp 12 không?
+      - Học bổng CMC Tiên phong yêu cầu điểm thi THPT như thế nào?
+      - Học bổng CMC Sáng tạo yêu cầu giải thưởng cấp tỉnh là gì?
+      - Học bổng CMC Khai phóng có yêu cầu giải thưởng quốc gia nào không?
+      - Học bổng CMC có bao gồm học phí các môn chuyên ngành không?   
+
+
+- intent: inquire_early_admission_scholarship
+  examples: |
+      - Trường CMC có chính sách ưu đãi nào dành cho thí sinh nộp hồ sơ sớm không?
+      - Các ưu đãi khi nộp hồ sơ sớm tại CMC là gì?
+      - CMC có giảm học phí cho thí sinh nộp hồ sơ sớm không?
+      - Tôi muốn biết về ưu đãi cho con của nhân viên CMC.
+      - Thí sinh là con của nhân viên CMC có được ưu đãi gì không?
+      - Chính sách ưu đãi cho thí sinh nhập học sớm tại CMC là gì?
+      - CMC có ưu đãi cho thí sinh nộp hồ sơ sớm vào năm 2024 không?
+      - Có học phí ưu đãi nào cho thí sinh nộp hồ sơ sớm vào CMC?
+      - Ưu đãi cho thí sinh là con của nhân viên CMC như thế nào?
+      - Chính sách ưu đãi cho thí sinh có nguyện vọng CMC là số 1 là gì?
+      - Học phí ưu đãi cho thí sinh nộp hồ sơ sớm là bao nhiêu?
+      - Thí sinh nhập học muộn có được hưởng ưu đãi không?
+      - Ưu đãi cho thí sinh đăng ký xét tuyển sớm là gì?
+      - CMC có ưu đãi cho thí sinh không phải con của nhân viên CMC không?
+      - Để nhận ưu đãi cho thí sinh là con của nhân viên CMC, cần có điều kiện gì?
+      - Chính sách ưu đãi dành cho thí sinh nộp hồ sơ sớm có gì đặc biệt?
+      - Thí sinh nộp hồ sơ sớm có được giảm học phí không?
+      - Nếu không nhập học, có được hoàn lại phí ưu đãi không?
+      - Có ưu đãi học phí nào cho thí sinh đăng ký nhập học trước ngày 31/05/2024 không?
+      - Chính sách ưu đãi cho thí sinh là con của nhân viên CMC có giới hạn số lượng không?
+      - Những thí sinh nào được hưởng ưu đãi học phí năm đầu tại CMC?
+      - Thí sinh nào đủ điều kiện để nhận ưu đãi học phí 9 triệu đồng tại CMC?
+        
